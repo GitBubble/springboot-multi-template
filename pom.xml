@@ -12,8 +12,8 @@
     <repository>
       <id>baba_mayun</id>
       <name>Maven China Mirror</name>
-      <url>http://maven.aliyun.com/nexus/content/groups/public</url>    
-    </repository>  
+      <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+    </repository>
 </distributionManagement>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -133,13 +133,17 @@
     </dependency>
   </dependencies>
 
-
+  <dependency>
+       <groupId>javax.transaction</groupId>
+       <artifactId>jta</artifactId>
+       <version>1.1</version>
+  </dependency>
   <build>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>1.5.4.RELEASE</version> 
+        <version>1.5.4.RELEASE</version>
         <executions>
            <execution>
               <goals>
@@ -155,7 +159,7 @@
         <directory>resources/</directory>
         <excludes>
           <exclude>**/*.java</exclude>
-          <exclude>**/.svn/*</exclude>
+          <exclude>**/.git/*</exclude>
         </excludes>
         <!-- 是否替换资源中的属性-->
         <filtering>false</filtering>
