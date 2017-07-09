@@ -31,7 +31,7 @@ public class ContentManagerServiceImpl implements ContentManagerService {
 
     public void setGroupsDao(HibernateDao<ProjectGroups, Integer> groupsDao) {
         this.groupsDao = groupsDao;
-        this.groupsDao.setEntityClass(ProjectGroups.class);
+        //this.groupsDao.setEntityClass(ProjectGroups.class);
     }
     @Transactional
     @Override
@@ -45,9 +45,10 @@ public class ContentManagerServiceImpl implements ContentManagerService {
 
         String sql = "SELECT tdu.id,tsu.name,tsu.YU_NAME employNum,tsu.DEPARTMENT_FOUR departmentFour,tsu.DEPARTMENT_FIVE departmentFive,tsu.CODE role,tsu.ROLE position, ISNULL(tdc.coin,0) score,ISNULL(tdc.experice_point,0) totalContribution  FROM T_SFM_USER tsu LEFT JOIN T_DuIsource_users tdu ON tsu.EMPLOY_ID = SUBSTRING (tdu.extern_uid,2,len(tdu.extern_uid)) LEFT JOIN T_DuIsource_Coins tdc ON tdu.ID = tdc.user_id    WHERE tsu.time='2017-06'      AND tsu.DEPARTMENT_THREE='路由器与电信以太开发管理部' AND tsu.ISHUAWEI='华为' AND tsu.DEPARTMENT_FOUR = '流控软件开发部' AND tsu.DEPARTMENT_FIVE = '模型算法开发部'";
 
-        List t = groupsDao.createSqlQuery(sql).list();
-
+        //List t = groupsDao.createSqlQuery(sql).list();
+         List t = null;
         return t;
+        //return t;
     }
 
 //    public String test() {

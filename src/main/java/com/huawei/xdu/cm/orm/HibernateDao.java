@@ -7,11 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.io.Serializable;
 
 @Repository
-public class HibernateDao<T, PK extends Serializable> extends com.huawei.ipm.base.orm.hibernate.HibernateDao<T, PK> {
+public class HibernateDao<T, PK extends Serializable> {
 
     @Autowired
-    @Override
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        super.setSessionFactory(sessionFactory);
+   public void setSessionFactory(SessionFactory sessionFactory) {
+        //super.setSessionFactory(sessionFactory);
     }
 }

@@ -1,7 +1,7 @@
 package com.huawei.xdu.cm.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.huawei.ipm.base.utils.string.StringUtil;
+
 import com.huawei.xdu.cm.service.ContentManagerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static org.apache.coyote.http11.Constants.a;
 import static org.hibernate.loader.custom.sql.SQLQueryReturnProcessor.log;
 
 @Controller
@@ -47,15 +46,15 @@ public class ViewController {
     @RequestMapping(value = "/name", method = RequestMethod.GET)
     public String getGroups(HttpServletRequest request,Model model) {
 
-        List<Map<String, String>> groups = service.queryProjectTops();
+       // List<Map<String, String>> groups = service.queryProjectTops();
 /*
                 StringUtil.getStringFromObject(request.getParameter("select")),
                 StringUtil.getStringFromObject(request.getParameter("where"))*/
 
 
-        String jsonRet = JSON.toJSONString(groups);
+        //String jsonRet = JSON.toJSONString(groups);
 
-        model.addAttribute("retvalue",jsonRet);
+        //model.addAttribute("retvalue",jsonRet);
         model.addAttribute("message",this.message);
 
         return "index";

@@ -131,14 +131,9 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-       <groupId>javax.transaction</groupId>
-       <artifactId>jta</artifactId>
-       <version>1.1</version>
-    </dependency>
-
   </dependencies>
+
+
   <build>
     <plugins>
       <plugin>
@@ -154,5 +149,19 @@
          </executions>
     </plugin>
     </plugins>
+
+    <resources>
+      <resource>
+        <directory>resources/</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+          <exclude>**/.svn/*</exclude>
+        </excludes>
+        <!-- 是否替换资源中的属性-->
+        <filtering>false</filtering>
+      </resource>
+
+    </resources>
+
   </build>
 </project>

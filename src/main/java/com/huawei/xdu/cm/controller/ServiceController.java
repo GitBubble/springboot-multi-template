@@ -9,7 +9,7 @@ package com.huawei.xdu.cm.controller;
  */
 
 import com.alibaba.fastjson.JSON;
-import com.huawei.ipm.base.utils.string.StringUtil;
+
 import com.huawei.xdu.cm.service.ContentManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
