@@ -39,11 +39,11 @@
                 <prop key="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</prop>
             </props>
         </property>
-        <property name="mappingResources">
+        <!--<property name="mappingResources">
             <list>
                 <value>mapping/ProjectGroups.hbm.xml</value>
             </list>
-        </property>
+        </property> -->
     </bean>
     <bean id="HibernateTransactionManager"
           class="org.springframework.orm.hibernate3.HibernateTransactionManager">
