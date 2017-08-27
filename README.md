@@ -1,6 +1,6 @@
 #OpenSource挖掘机
 
-[![DEMO](http://rnd-isourceb.huawei.com/d00190167/opensource-digger/blob/master/demo.png?oid= "DEMO")](http://rnd-isourceb.huawei.com/d00190167/opensource-digger/file_edit/master/README.md "DEMO")
+[![DEMO](https://github.com/GitBubble/springboot-multi-template/blob/dev2/demo.png)](https://github.com/GitBubble/springboot-multi-template/blob/dev2/demo.png)
 
 ##重要更新
 
