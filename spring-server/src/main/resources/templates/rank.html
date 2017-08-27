@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://v3.bootcss.com/examples/dashboard/# -->
+<html xmlns:th='http://www.thymeleaf.org'>
+
+   <head>
+   <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name='description' content='OpenSource-digger frontend'>
+    <meta name='author' content='Arthur.Deng'>
+
+    <title>流控软件开发部</title>
+     <script type='text/javascript' src='../static/lib/bootstrap/jquery.min.js'></script>
+    <!-- Bootstrap core CSS -->
+    <link href='../static/css/bootstrap.min.css' rel='stylesheet'>
+       <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+       <link href='../static/css/bootstrap-select.css' rel='stylesheet'>
+       <!-- Custom styles for this template -->
+    <link href='../static/css/dashboard.css' rel='stylesheet'>
+
+
+   </head>
+  <body>
+
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+      <div class='container-fluid'>
+        <div class='navbar-header'>
+            <a class='navbar-brand' title='#' onclick='javascript:shakeBaby();'>流控软件开发部.深圳(点击High一下！)</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class='container-fluid'>
+
+        <div class='col-md-11 main'>
+          <div class='page-header'><h1>流控内源大排名</h1> </div>
+           
+		  <div class='container-fluid' id='pannelGroup'>
+          <!-- Split button -->
+          <div class='btn-group' id='forceSection'>
+            <button id='forceId' type='button' class='btn btn-primary' title='>>战队选择<<'>>>战队选择<<</button>
+            <button type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              <span class='sr-only'>Toggle Dropdown</span>
+			  <span class='caret'></span>
+            </button>
+            <ul class='dropdown-menu'><!-- 请按: 五级部门-地域  格式填写列表value值  -->
+              <li value='路由器与电信以太开发管理部-流控软件开发部-模型算法开发部-深圳'><a href='#'>模型算法-深圳团队</a></li>
+              <li value='路由器与电信以太开发管理部-流控软件开发部-模型算法开发部-北京'><a href='#'>模型算法-北京团队</a></li>
+			  <li value='路由器与电信以太开发管理部-流控软件开发部-安全业务开发部-南京'><a href='#'>安全业务团队</a></li>
+			  <li value='路由器与电信以太开发管理部-流控软件开发部-底层业务开发部-南京'><a href='#'>底层业务团队</a></li>
+			  <li value='路由器与电信以太开发管理部-流控软件开发部-流量控制开发部-南京'><a href='#'>流量控制团队</a></li>
+			  <li value='路由器与电信以太开发管理部-流控软件开发部-流量控制开发部-北京'><a href='#'>流量控制团队</a></li>
+              <li role='separator' class='divider'></li>
+              <li value='路由器与电信以太开发管理部-流控软件开发部-模型算法开发部-深圳'><a href='#'>默认</a></li>
+            </ul>
+          </div>
+		  
+		  
+		    <div class='btn-group' id='DivisionSection'>
+            <button id='forceId' type='button' class='btn btn-primary' title='>>作战范围<<'>>>作战范围<<    </button>
+            <button type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              <span class='sr-only'>Toggle Dropdown</span>
+			  <span class='caret'></span>
+            </button>
+            <ul class='dropdown-menu'>
+              <li value='1'><a href='#'>六级部门.LM地域排名</a></li>
+              <li value='2'><a href='#'>五级部门.PDU排名</a></li>
+			  <li value='3'><a href='#'>四级部门.DU排名</a></li>
+              <li role='separator' class='divider'></li>
+              <li value='1'><a href='#'>默认</a></li>
+            </ul>
+          </div>
+		  
+		  
+		<div class='btn-group' id='ScopeSection'>
+            <button id='forceId' type='button' class='btn btn-primary'  title='>>作战周期<<'>>>作战周期<<    </button>
+            <button type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              <span class='sr-only'>Toggle Dropdown</span>
+			  <span class='caret'></span>
+            </button>
+            <ul class='dropdown-menu'>
+              <li value='1'><a href='#'>一周</a></li>
+              <li value='2'><a href='#'>二周</a></li>
+              <li value='3'><a href='#'>一月</a></li>
+			  <li value='4'><a href='#'>二月</a></li>
+			  <li value='5'><a href='#'>一季度</a></li>
+			  <li value='6'><a href='#'>一年</a></li>
+              <li role='separator' class='divider'></li>
+              <li value='1'><a href='#'>默认</a></li>
+            </ul>
+          </div>  
+		  
+		<div class='btn-group' id='RankSection'>
+            <button id='forceId' type='button' class='btn btn-primary'  title='>>选秀方式<<'>>>选秀方式<< </button>
+            <button type='button' class='btn btn-primary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              <span class='sr-only'>Toggle Dropdown</span>
+			  <span class='caret'></span>
+            </button>
+            <ul class='dropdown-menu'>
+			  <li value='personalScore'><a href='#'>神秘公式</a></li>
+              <li value='mergedMrCount'><a href='#'>合入MR数</a></li>
+              <li value='effectiveIssueCount'><a href='#'>有效ISSUE数</a></li>
+
+              <li role='separator' class='divider'></li>
+              <li value='personalScore'><a href='#'>默认</a></li>
+            </ul>
+         </div>
+		 
+	    <div class='btn-group' id='Run'>
+            <button type='button' class='btn btn-danger'> RUN >>   </button>
+        </div>
+		</div>
+       <span style='float:right'>请用谷歌浏览器体验最佳效果</span> <span th:text='${period}' id='dateSpan'>日期显示位置</span>
+		
+		<div id='loadingPart'  class='row container-fluid'>  
+          <div class='row placeholders' id="chart">
+		    <div class='col-xs-6 col-sm-3 placeholder'>
+                <canvas id='project' width='200' height='200'></canvas>
+              <h4>项目组</h4>
+              <span class='text-muted' >质量之担当，颜值之担当</span>
+            </div>
+            <div class='col-xs-6 col-sm-3 placeholder'>
+                <canvas id='qos' width='200' height='200'></canvas>
+              <h4>QOS&安全</h4>
+              <span class='text-muted'>流控我们才是核心！</span>
+            </div>
+            <div class='col-xs-6 col-sm-3 placeholder'>
+                <canvas id='frm' width='200' height='200'></canvas>
+              <h4>子卡OM&整机</h4>
+              <span class='text-muted'>把控全局靠我们！</span>
+            </div>
+            <div class='col-xs-6 col-sm-3 placeholder'>
+                <canvas id='cxb' width='200' height='200'></canvas>
+              <h4>交叉</h4>
+              <span class='text-muted'>流量的中转站！</span>
+            </div>
+          </div>
+		  
+		  <!-- project group start-->
+		  <div class='Projectsection'>
+          <h2 class='sub-header'>项目组排名</h2>
+          <div class='table-responsive'>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>排名</th>
+				  <th>项目组名</th>
+                  <th>全部有效ISSUE</th>
+                  <th>全部有效MR</th>
+                  <th>全部有效总分</th>
+                </tr>
+              </thead>
+              <tbody id='prjRank' class='rank'>
+                <tr th:each='projectRank: ${projectRank}' >
+                    <td th:text='${projectRank.NAME}' />
+				    <td th:text='${projectRank.NAME}' />
+                    <td th:text='${projectRank.ISSUESCORE}' />
+                    <td th:text='${projectRank.MRSCORE}' />
+                    <td th:text='${projectRank.PROJECTSCORES}' />
+                </tr>              
+              </tbody>
+            </table>
+          </div>
+          </div>		  
+		  <!-- group end-->		  
+		  
+           <!-- group start-->
+		  <div class='section'>
+          <h2 class='sub-header'>QOS&安全排名数据</h2>
+          <div class='table-responsive'>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>姓名</th>
+				  <th>合入MR</th>
+				  <th>提他ISSUE</th>
+				  <th>评论别人MR</th>
+                  <th>评论自己MR</th>						  
+                  <th>MR评论数</th>
+                  <th>处理MR数</th>		  
+                  <th>有效ISSUE</th>				  
+                  <th>全部ISSUE</th>
+                  <th>自提ISSUE</th>
+                  <th>闭环ISSUE</th>			
+                  <th>流控计算分</th>
+                </tr>
+              </thead>
+              <tbody id='qosRank' class='rank'>
+              <tr th:each='qos:${qos}' >
+                  <td th:text='${qos.employNum}' />
+                  <td th:text='${qos.name}' />
+				  <td th:text='${qos.mergedMrCount}' />
+				  <td th:text='${qos.resposbilityIssueCountBySelf}' />
+				  <td th:text='${qos.noteTotalOtherCount}' />
+				  <td th:text='${qos.noteTotalCount}' />
+				  <td th:text='${qos.mrCommonReplyCount}' />
+                  <td th:text='${qos.handleMRCount}' />
+				  <td th:text='${qos.effectiveIssueCount}' />
+                  <td th:text='${qos.issueTotalCount}' />
+                  <td th:text='${qos.effectiveIssueCountBySelf}' />
+                  <td th:text='${qos.closeIssueCount}' />
+				  <td th:text='${qos.personalScore}'/>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+		  </div>
+		  <!-- group end-->
+		  
+		  <!-- group start-->
+		  <div class='section'>
+          <h2 class='sub-header'>交叉组排名</h2>
+          <div class='table-responsive'>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>姓名</th>
+				  <th>合入MR</th>
+				  <th>提他ISSUE</th>
+				  <th>评论别人MR</th>
+                  <th>评论自己MR</th>				  
+                  <th>MR评论数</th>
+                  <th>处理MR数</th>		
+                  <th>有效ISSUE</th>				  
+                  <th>全部ISSUE</th>
+                  <th>自提ISSUE</th>
+                  <th>闭环ISSUE</th>
+                  <th>流控计算分</th>
+                </tr>
+              </thead>
+              <tbody id='cxbRank' class='rank'>
+                 <tr th:each='cxb:${cxb}'>
+                  <td th:text='${cxb.employNum}' />
+                  <td th:text='${cxb.name}' />
+				  <td th:text='${cxb.mergedMrCount}' />
+				  <td th:text='${cxb.resposbilityIssueCountBySelf}' />
+				  <td th:text='${cxb.noteTotalOtherCount}' />
+                  <td th:text='${cxb.noteTotalCount}' />				  
+				  <td th:text='${cxb.mrCommonReplyCount}' />
+                  <td th:text='${cxb.handleMRCount}' />
+				  <td th:text='${cxb.effectiveIssueCount}' />
+                  <td th:text='${cxb.issueTotalCount}' />
+                  <td th:text='${cxb.effectiveIssueCountBySelf}' />
+                  <td th:text='${cxb.closeIssueCount}' />
+				  <td th:text='${cxb.personalScore}'/>
+                 </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>		  
+		  <!-- group end-->
+		  
+		  
+		  <!-- group start-->
+		  <div class='section'>
+          <h2 class='sub-header'>子卡OM&整机</h2>
+          <div class='table-responsive'>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>姓名</th>
+				  <th>合入MR</th>
+				  <th>提他ISSUE</th>
+				  <th>评论别人MR</th>
+                  <th>评论自己MR</th>					  
+                  <th>MR评论数</th>
+                  <th>处理MR数</th>			  
+                  <th>有效ISSUE</th>				  
+                  <th>全部ISSUE</th>
+                  <th>自提ISSUE</th>
+                  <th>闭环ISSUE</th>
+                  <th>流控计算分</th>
+                </tr>
+              </thead>
+                 <tbody id='frmRank' class='rank'>
+                    <tr th:each='frm: ${frm}' >
+                       <td th:text='${frm.employNum}' />
+                       <td th:text='${frm.name}' />
+				       <td th:text='${frm.mergedMrCount}' />
+				       <td th:text='${frm.resposbilityIssueCountBySelf}' />
+				       <td th:text='${frm.noteTotalOtherCount}' />
+                       <td th:text='${frm.noteTotalCount}' />						   
+				       <td th:text='${frm.mrCommonReplyCount}' />					   
+                       <td th:text='${frm.handleMRCount}' />				   
+				       <td th:text='${frm.effectiveIssueCount}' />
+                       <td th:text='${frm.issueTotalCount}' />
+                       <td th:text='${frm.effectiveIssueCountBySelf}' />
+                       <td th:text='${frm.closeIssueCount}' />
+				       <td th:text='${frm.personalScore}'/>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          </div>		  
+		  <!-- group end-->
+		  
+
+		  
+        </div>
+		
+      </div>
+	</div>
+    </div>
+    <!--div class='navbar navbar-fixed-bottom'>流控计算分排名公式：有效ISSUE*3 + 评论别人MR数量*2 + 合入MR数( if mrcount>10 then mrcount/=10; )</div-->
+<!--footer-->
+<footer class="footer1">
+<div class="footer-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="copyright">
+					© 2017-2018, Jack.Deng, Traffic Control Development Department
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="design">
+
+					 <a href="javascript:alert('需要口令进入')">管理入口 </a> |  <a target="_blank" href="http://10.61.16.223:8088/admin">本人承诺很谨慎的去后台更新名单</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>	
+</footer>
+
+</body>
+
+<script type='text/javascript' src='../static/lib/chart/DengUtil.js'></script>
+<script type='text/javascript' src='../static/lib/chart/Chart.bundle.js'></script>
+<script type='text/javascript' src='../static/lib/bootstrap/bootstrap.min.js'></script>
+<script type='text/javascript' src='../static/lib/bootstrap/highlight.pack.js'></script>
+<script type='text/javascript' src='../static/lib/bootstrap/bootstrap-select.min.js'></script>
+<script type='text/javascript' src='../static/lib/chart/DynamicLoad.js'></script>
+
+
+</html>
+

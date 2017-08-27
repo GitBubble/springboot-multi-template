@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.huawei.ptn.opensourceDigger.model">
+    <class name="ProjectGroups" table="T_BIG_VERSION">
+        <meta attribute="sync-DAO">true</meta>
+        <id	name="ID"  column="ID" type="int" length="0" ></id>
+        <property name="NAME" column="NAME" type="string" not-null="false" length="100"/>
+        <property name="OWNER" column="OWNER" type="string" not-null="false" length="50"/>
+        <property name="ISSUESCORE" column="ISSUESCORE" type="int" not-null="false" length="50"/>
+        <property name="MRSCORE" column="MRSCORE" type="int" not-null="false" length="50"/>
+        <property name="PROJECTSCORES" column="PROJECTSCORES" type="int" not-null="false" length="50"/>
+
+    </class>
+
+    <class name="ContributionTopBean" table="T_BIG_VERSION">
+        <meta attribute="sync-DAO">true</meta>
+        <id	name="ID"  column="ID" type="int" length="0" ></id>
+        <property name="employId" column="employId" type="string" not-null="false" length="100"/>
+        <property name="employNum" column="employNum" type="string" not-null="false" length="100"/>
+        <property name="name" column="name" type="string" not-null="false" length="50"/>
+        <property name="departmentFour" column="departmentFour" type="string" not-null="false" length="100"/>
+        <property name="departmentFive" column="departmentFive" type="string" not-null="false" length="100"/>
+        <property name="role" column="role" type="string" not-null="false" length="100"/>
+        <property name="position" column="position" type="string" not-null="false" length="0"/>
+        <property name="issueTotalCount" column="issueTotalCount" type="int" not-null="false" length="0"/>
+        <property name="effectiveIssueCount" column="effectiveIssueCount" type="int" not-null="false" length="0"/>
+        <property name="effectiveIssueCountBySelf" column="effectiveIssueCountBySelf" type="int" not-null="false" length="0"/>
+        <property name="resposbilityIssueCountBySelf" column="resposbilityIssueCountBySelf" type="int" not-null="false" length="0"/>
+        <property name="closeIssueCount" column="closeIssueCount" type="int" not-null="false" length="0"/>
+        <property name="noteTotalCount" column="noteTotalCount" type="int" not-null="false" length="0"/>
+        <property name="noteTotalOtherCount" column="noteTotalOtherCount" type="int" not-null="false" length="0"/>
+        <property name="handleMRCount" column="handleMRCount" type="int" not-null="false" length="0"/>
+        <property name="resposbilityIssueCount" column="resposbilityIssueCount" type="int" not-null="false" length="0"/>
+        <property name="beiCloseIssueCount" column="beiCloseIssueCount" type="int" not-null="false" length="0"/>
+        <property name="unBeiCloseIssueCount" column="unBeiCloseIssueCount" type="int" not-null="false" length="0"/>
+        <property name="mrTotalCount" column="mrTotalCount" type="int" not-null="false" length="0"/>
+        <property name="overLineCount" column="overLineCount" type="int" not-null="false" length="0"/>
+        <property name="mrCommonCount" column="mrCommonCount" type="int" not-null="false" length="0"/>
+        <property name="mrRejected" column="mrRejected" type="int" not-null="false" length="0"/>
+        <property name="score" column="score" type="int" not-null="false" length="0"/>
+        <property name="totalContribution" column="totalContribution" type="int" not-null="false" length="0"/>
+        <property name="funcErrSum" column="funcErrSum" type="int" not-null="false" length="0"/>
+        <property name="hotDegree" column="hotDegree" type="string" not-null="false" length="100"/>
+        <property name="participateDegree" column="participateDegree" type="string" not-null="false" length="100"/>
+        <property name="totalPersionNum" column="totalPersionNum" type="int" not-null="false" length="100"/>
+        <property name="beyondIssue" column="beyondIssue" type="int" not-null="false" length="100"/>
+        <property name="beiBeyondIssue" column="beiBeyondIssue" type="int" not-null="false" length="100"/>
+        <property name="mergedMrCount" column="mergedMrCount" type="int" not-null="false" length="100"/>
+        <property name="unHandleMRCount" column="unHandleMRCount" type="int" not-null="false" length="100"/>
+        <property name="mrCommonReplyCount" column="mrCommonReplyCount" type="int" not-null="false" length="100"/>
+        <property name="personalScore" column="personalScore" type="int" not-null="false" length="100"/>
+        <property name="group" column="group" type="string" not-null="false" length="100"/>
+    </class>
+
+</hibernate-mapping>
+
+
+

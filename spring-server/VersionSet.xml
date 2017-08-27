@@ -1,0 +1,28 @@
+<version_set type="microService">
+	<!-- <type value="runtime" download="true">
+		<software> 
+		  <subtype>service</subtype>
+		  <name>CloudInit</name>  
+		  <version>1.1.59</version>
+		  <path>http://clouddragon.alpha.tools.huawei.com/artifact/artifact/package?type_name=tomcat,maven,_maven</path>
+		</software>
+	</type>
+  
+	<type value="test" download="true" >
+		<software> 
+		  <subtype></subtype>
+		  <name>tomcat</name>  
+		  <version>7.0.59</version>
+		  <path>http://clouddragon.alpha.tools.huawei.com/artifact/artifact/package?type_name=tomcat,maven,_maven</path>
+		</software>
+	</type>
+	
+	<type value="build" download="false">
+		<software> 
+		  <subtype></subtype>
+		  <name>tomcat</name>  
+		  <version>7.0.59</version>
+		  <path>http://clouddragon.alpha.tools.huawei.com/artifact/artifact/package?type_name=tomcat,maven,_maven</path>
+		</software>
+	</type> -->
+</version_set>

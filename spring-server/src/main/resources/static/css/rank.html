@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://v3.bootcss.com/examples/dashboard/# -->
+<html xmlns:th="http://www.thymeleaf.org">
+
+   <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+
+    <title>流控软件开发部</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/css/dashboard.css" rel="stylesheet">
+     <script type="text/javascript" src="../static/lib/chart/Chart.bundle.js"></script>
+     <script type="text/javascript" src="../static/lib/chart/DengUtil.js"></script>
+   </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dev.by.jack.Deng</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Come</a></li>
+            <li><a href="#">on</a></li>
+            <li><a href="#">baby</a></li>
+            <li><a href="#">yeah</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="col-md-11 main">
+          <h1 class="page-header">流控深圳内源大排名</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <canvas id="qos" width="200" height="200"></canvas>
+              <h4>QOS&安全</h4>
+              <span class="text-muted">流控我们才是核心！</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <canvas id="frm" width="200" height="200"></canvas>
+              <h4>子卡OM&整机</h4>
+              <span class="text-muted">把控全局靠我们！</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <canvas id="cxb" width="200" height="200"></canvas>
+              <h4>交叉</h4>
+              <span class="text-muted">流量的中转站！</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+                <canvas id="project" width="200" height="200"></canvas>
+              <h4>项目组</h4>
+              <span class="text-muted">质量之担当，颜值之担当</span>
+            </div>
+          </div>
+           <!-- group start-->
+          <h2 class="sub-header">QOS&安全排名数据</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>姓名</th>
+                  <th>有效ISSUE</th>
+                  <th>有效MR</th>
+                  <th>有效总分</th>
+                </tr>
+              </thead>
+              <tbody id='qosRank'>
+              <tr th:each="qos: ${qos}" >
+                  <td th:text="${qos.employNum}" />
+                  <td th:text="${qos.name}" />
+                  <td th:text="${qos.effectiveIssueCount}" />
+                  <td th:text="${qos.mergedMrCount}" />
+				  <td th:text="${qos.personalScore}"/>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+		  <!-- group end-->
+		  
+		  <!-- group start-->
+          <h2 class="sub-header">交叉组排名</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>姓名</th>
+                  <th>有效ISSUE</th>
+                  <th>有效MR</th>
+                  <th>有效总分</th>
+                </tr>
+              </thead>
+              <tbody id='cxbRank'>
+                 <tr th:each="cxb: ${cxb}">
+                     <td th:text="${cxb.employNum}" />
+                     <td th:text="${cxb.name}" />
+                     <td th:text="${cxb.effectiveIssueCount}" />
+                     <td th:text="${cxb.mergedMrCount}" />
+					 <td th:text="${cxb.personalScore}" />
+                 </tr>
+              </tbody>
+            </table>
+          </div>		  
+		  <!-- group end-->
+		  
+		  
+		  <!-- group start-->
+          <h2 class="sub-header">子卡OM&整机</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th>姓名</th>
+                  <th>有效ISSUE</th>
+                  <th>有效MR</th>
+                  <th>有效总分</th>
+                </tr>
+              </thead>
+                 <tbody id='frmRank'>
+                    <tr th:each="frm: ${frm}" >
+                        <td th:text="${frm.employNum}" border="1"/>
+                        <td th:text="${frm.name}" border="1"/>
+                        <td th:text="${frm.effectiveIssueCount}" border="1"/>
+                        <td th:text="${frm.mergedMrCount}" border="1"/>
+						<td th:text="${frm.personalScore}" border="1"/>
+                    </tr>
+                </tbody>
+            </table>
+          </div>		  
+		  <!-- group end-->
+		  
+		  <!-- project group start-->
+          <h2 class="sub-header">项目组排名</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>排名</th>
+				  <th>项目组名</th>
+                  <th>全部有效ISSUE</th>
+                  <th>全部有效MR</th>
+                  <th>全部有效总分</th>
+                </tr>
+              </thead>
+              <tbody id="prjRank">
+                <tr th:each="projectRank: ${projectRank}" >
+                    <td th:text="${projectRank.NAME}" border="1"/>
+				    <td th:text="${projectRank.NAME}" border="1"/>
+                    <td th:text="${projectRank.ISSUESCORE}" border="1"/>
+                    <td th:text="${projectRank.MRSCORE}" border="1"/>
+                    <td th:text="${projectRank.PROJECTSCORES}" border="1"/>
+                </tr>              
+              </tbody>
+            </table>
+          </div>		  
+		  <!-- group end-->
+
+		  
+        </div>
+      </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+drawChart("qos","qosRank");
+drawChart("frm","frmRank");
+drawChart("cxb","cxbRank");
+drawChart("project","prjRank");
+</script>
+
+</html>

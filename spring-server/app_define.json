@@ -1,0 +1,17 @@
+{
+    "fileVersion": "1",
+    "name": "opensourcedigger",
+    "description": "",
+    "version":"1.0.0-SNAPSHOT",
+    "fileSuffix":"jar",
+    "packagePath":"target",
+    "packageName":"opensourcedigger-1.0.0-SNAPSHOT.jar",
+    "type":"microService", 
+    "processes": {
+        "XduMicroServiceTemplate": {
+            "subscribes": [
+            ]
+
+        }
+    }
+}

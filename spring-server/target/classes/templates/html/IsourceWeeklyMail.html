@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>流控深圳大排名</title>
+</head>
+<!--设置通用字体和背景色-->
+<body th:style="'font-family: Verdana, Arial, Helvetica, sans-serif; background: #ffffff;'">
+    <!--添加图头-->
+    <table th:style="'width:75%; align:center'">
+        <tr th:style="'align:center'">
+            <td>
+                <img th:src="@{D:/cc/tools/nodejs-export/banner.png}"/>
+            </td>
+        </tr>
+    </table>
+    <!--邮件标题-->
+    <h1 th:style="'font-weight:bold; font-size:30px; align:center'">流控内源大比拼</h1>
+
+    <div th:style="'align:center'">
+
+
+        <!--添加空行-->
+        <div>&nbsp;</div>
+
+        <!--个人提交MR和Commiter处理MR-->
+        <table th:style="'width:75%; align:center'">
+            <tr >
+                <td th:style="'align:left;width:50%'">
+                    <table>
+                        <!--tr align='left'>
+                            <td>
+                                <img src='cid:SubmmitMrBar_Resource'>
+                            </td>
+                        </tr-->
+                        <tr th:style="'align:center'">
+                            <td>
+                                <img th:src="@{D:/cc/tools/nodejs-export/qos.png}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td th:style="'align:left;width:50%'">
+                    <table>
+                        <tr th:style="'align:center'">
+                            <td th:style="'width:100%; align:center'">
+                                <img th:src="@{D:/cc/tools/nodejs-export/frm.png}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!--添加空行-->
+        <div>&nbsp;</div>
+
+        <!--个人提交MR和Commiter处理MR-->
+        <table th:style="'width:75%; align:center'">
+            <tr >
+                <td th:style="'align:left;width:50%'">
+                    <table>
+                        <!--tr align='left'>
+                            <td>
+                                <img src='cid:SubmmitMrBar_Resource'>
+                            </td>
+                        </tr-->
+                        <tr th:style="'align:center'">
+                            <td>
+                                <img th:src="@{D:/cc/tools/nodejs-export/cxb.png}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td th:style="'align:left;width:50%'">
+                    <table>
+                        <tr th:style="'align:center'">
+                            <td th:style="'width:100%; align:center'">
+                                <img th:src="@{D:/cc/tools/nodejs-export/project.png}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!--添加空行-->
+        <div>&nbsp;</div>
+
+        <!--添加空行-->
+        <div>&nbsp;</div>
+        <!-- group start-->
+        <h2 >QOS&安全排名数据</h2>
+
+        <table th:style="'width:75%; align:center;border:1px'">
+                <thead th:style="'align:left;border:1px'">
+                <tr th:style="'border:solid 1px'">
+                    <th>排名</th>
+                    <th>姓名</th>
+                    <th>有效ISSUE</th>
+                    <th>有效MR</th>
+                    <th>有效总分</th>
+                </tr>
+                </thead>
+                <tbody id='qosRank'>
+                <tr th:each="qos: ${qos}" th:style="'border:solid 1px'">
+                    <td th:text="${qos.employNum}" >
+                    <td th:text="${qos.name}" />
+                    <td th:text="${qos.effectiveIssueCount}" />
+                    <td th:text="${qos.mergedMrCount}" />
+                    <td th:text="${qos.personalScore}"/>
+                </tr>
+                </tbody>
+            </table>
+
+        <!-- group end-->
+
+        <!-- group start-->
+        <h2 >交叉组排名</h2>
+        <table th:style="'width:75%; align:center;border:1px'">
+            <thead th:style="'align:left;border:1px'">
+                <tr th:style="'border:solid 1px'">
+                    <th>排名</th>
+                    <th>姓名</th>
+                    <th>有效ISSUE</th>
+                    <th>有效MR</th>
+                    <th>有效总分</th>
+                </tr>
+                </thead>
+                <tbody id='cxbRank'>
+                <tr th:each="cxb: ${cxb}" th:style="'border:solid 1px'">
+                    <td th:text="${cxb.employNum}" />
+                    <td th:text="${cxb.name}" />
+                    <td th:text="${cxb.effectiveIssueCount}" />
+                    <td th:text="${cxb.mergedMrCount}" />
+                    <td th:text="${cxb.personalScore}" />
+                </tr>
+                </tbody>
+            </table>
+
+        <!-- group end-->
+
+
+        <!-- group start-->
+        <h2>子卡OM&整机</h2>
+        <table th:style="'width:75%; align:center;border:1px'">
+            <thead th:style="'align:left;border:1px'">
+                <tr th:style="'border:solid 1px'">
+                    <th>排名</th>
+                    <th>姓名</th>
+                    <th>有效ISSUE</th>
+                    <th>有效MR</th>
+                    <th>有效总分</th>
+                </tr>
+                </thead>
+                <tbody id='frmRank'>
+                <tr th:each="frm: ${frm}" th:style="'border:solid 1px'">
+                    <td th:text="${frm.employNum}"/>
+                    <td th:text="${frm.name}" />
+                    <td th:text="${frm.effectiveIssueCount}" />
+                    <td th:text="${frm.mergedMrCount}" />
+                    <td th:text="${frm.personalScore}" />
+                </tr>
+                </tbody>
+            </table>
+        <!-- group end-->
+
+        <!-- project group start-->
+        <h2>项目组排名</h2>
+        <table th:style="'width:75%; align:center;border:1px'">
+            <thead th:style="'align:left;border:1px'">
+                <tr th:style="'border:solid 1px'">
+                    <th>排名</th>
+                    <th>项目组名</th>
+                    <th>全部有效ISSUE</th>
+                    <th>全部有效MR</th>
+                    <th>全部有效总分</th>
+                </tr>
+                </thead>
+                <tbody id="prjRank">
+                <tr th:each="projectRank: ${projectRank}" th:style="'border:solid 1px'">
+                    <td th:text="${projectRank.NAME}" />
+                    <td th:text="${projectRank.NAME}"/>
+                    <td th:text="${projectRank.ISSUESCORE}" />
+                    <td th:text="${projectRank.MRSCORE}"/>
+                    <td th:text="${projectRank.PROJECTSCORES}"/>
+                </tr>
+                </tbody>
+            </table>
+
+        <!-- group end-->
+
+    </div>
+</body>
+</html>

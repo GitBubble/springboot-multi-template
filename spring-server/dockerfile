@@ -1,0 +1,6 @@
+FROM docker-hub.tools.huawei.com/clouddragon/tomcat:7-jre8-oracle
+ENV LC_ALL en_US.UTF-8
+ENV TZ 'Asia/Shanghai'
+ENV SERVICE_NAME opensourcedigger
+ADD $SERVICE_NAME.war /usr/local/tomcat/webapps
+CMD ["./run.sh"]

@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: opensource-digger
+  thymeleaf:
+    prefix: classpath:/templates
+logging:
+  level:
+    root: INFO
+    com.huawei.opensource-digger: ERROR
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.252.211.16:10001/eureka/
+  instance:
+    preferIpAddress: true

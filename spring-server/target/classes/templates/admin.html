@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+   'http://www.w3.org/TR/html4/loose.dtd'>
+
+<html lang='en'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <title>Opensource-digger数据转换程序</title>
+  <meta name='author' content='Shan Carter'>
+  <!-- Date: 2010-08-26 -->
+  <link rel='stylesheet' href='../static/css/converter.css' type='text/css' media='screen' title='no title' charset='utf-8'>
+
+  <script src='../static/lib/converter/jquery.js' type='text/javascript' charset='utf-8'></script>
+  <script src='../static/lib/converter/CSVParser.js' type='text/javascript' charset='utf-8'></script>
+  <script src='../static/lib/converter/DataGridRenderer.js' type='text/javascript' charset='utf-8'></script>
+  <script src='../static/lib/converter/converter.js' type='text/javascript' charset='utf-8'></script>
+  <script src='../static/lib/converter/Controller.js' type='text/javascript' charset='utf-8'></script>
+
+</head>
+<body>
+  <div id='base'>
+    <div id='header'>
+      <div id='description'>
+        <h1>内源挖掘机数据转换程序</h1>
+        <p>将Excel数据转化为Web友好的格式,包括HTML,JSON,XML。文件路径写入springserver目录</p>
+        <p>Fork me on <a href='http://rnd-isourceb.huawei.com/d00190167/opensource-digger/tree/master'>d00190167@iSource</a>.</p>
+      </div>
+      <div id='settings'>
+        <h3>设置</h3>
+        <form id='settingsForm'>
+           <p>分隔符:
+
+             <label><input class='settingsElement' type='radio' name='delimiter' id='delimiterAuto'   value='auto' checked/> 自动识别</label>
+             <label><input class='settingsElement' type='radio' name='delimiter' id='delimiterComma'  value='comma' /> 逗号</label>
+             <label><input class='settingsElement' type='radio' name='delimiter' id='delimiterTab'    value='tab' /> Tab制表符</label>
+            </p>
+          <p>Decimal Sign:
+
+             <label><input class='settingsElement' type='radio' name='decimal' id='decimalDot'   value='dot' checked/> 点</label>
+             <label><input class='settingsElement' type='radio' name='decimal' id='decimalComma'  value='comma' /> 逗号</label>
+            </p>
+          <p><label><input class='settingsElement' type='checkbox' name='' value='' id='headersProvidedCB' checked /> 头部第一行</label></p>
+          <div class='settingsGroup'>
+            <p>转换: <label><input class='settingsElement' type='radio' name='headerModifications' value='downcase' id='headersDowncase' /> 小写</label>
+            <label><input class='settingsElement' type='radio' name='headerModifications' id='headersUpcase' value='upcase' /> 大写</label>
+            <label><input class='settingsElement' type='radio' name='headerModifications' id='headersNoTransform' value='none' checked /> 无</label></p>
+          </div>
+
+          <p><label><input class='settingsElement' type='checkbox' name='some_name' value='' id='includeWhiteSpaceCB' checked /> 输出中包含空格</label></p>
+          <div class='settingsGroup'>
+            <p>缩进方式: <label><input class='settingsElement' type='radio' name='indentType' value='tabs' id='includeWhiteSpaceTabs'/> tabs指标符</label> <label><input class='settingsElement' type='radio' name='indentType' value='spaces' id='includeWhiteSpaceSpaces' checked/> 空格</label></p>
+          </div>
+
+
+        </form>
+
+
+      </div>
+    </div>
+
+
+
+    <div id='converter' class=''>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>
